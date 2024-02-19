@@ -1,0 +1,87 @@
+{
+      "layer": "top", // Waybar at top layer
+     "position": "top", // Waybar position (top|bottom|left|right)
+    "modules-left": ["hyprland/workspaces","wlr/taskbar", ],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["idle_inhibitor","pulseaudio","network","clock","temperature","upower", "tray"],
+    "spacing": 4,
+    "margin-top":5,
+    "margin-left":5,
+    "margin-right":5,
+
+    "hyprland/window": {
+    },
+
+    "hyprland/workspaces": {
+     // "active-only":true,
+//     "persistent-workspaces":{
+ //      "*": 5,
+   //  }
+    },
+
+    "wlr/taskbar":{
+      "icon-theme":"Papirus-Dark",
+      "icon-size":12,
+      "active-first":true,
+//      "sort-by-app-id":true,
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "tooltip": true,
+        "format-icons":{
+            "activated": "󰌿",
+            "deactivated": ""
+        },
+        "on-click-right": "swaylock"        
+    },
+
+    "wireplumber":{
+      "format":"  {volume}%",
+      "format-muted":"󰖁",
+      "reverse-scrolling":1,
+    },
+
+    "network":{
+      "format": "{ifname}",
+      "format-wifi": "  {essid}",
+      "format-ethernet": "󰈀  {ifname}",
+      "format-disconnected": "󰖪",
+      "tooltip-format": "󰈀 {ifname} via {gwaddri}",
+      "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
+      "tooltip-format-ethernet": "󰈀 {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
+      "tooltip-format-disconnected": "Disconnected",
+      "max-length": 50,
+
+    },
+
+
+    "clock": {
+      "format-alt": "{:%a, %d. %b  %H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        // START CLOCK FORMAT
+//        "format-alt": "{:%Y-%m-%d}",
+
+    },
+
+     "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "󰖁",
+        "format-icons": {
+            "headphone": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": "󰜟",
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol",
+  }
+}
+

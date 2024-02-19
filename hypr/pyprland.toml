@@ -1,0 +1,39 @@
+[pyprland]
+plugins = [
+  "scratchpads",
+  "lost_windows",
+  "monitors",
+  "shift_monitors",
+  "toggle_dpms",
+  "magnify",
+  "expose",
+  "shift_monitors",
+  "workspaces_follow_focus",
+]
+
+[workspaces_follow_focus]
+max_workspaces = 0
+
+[expose]
+include_special = false
+
+[scratchpad]
+enabled = false  # Change this to false
+start_at_login = false
+
+[scratchpads.term]
+animation = "fromTop"
+command = "kitty --class kitty-dropterm"
+class = "kitty-dropterm"
+size = "60% 60%"
+unfocus = "hide"
+lazy = true
+
+[scratchpads.file]
+animation = "fromRight"
+command = "kitty --class yazi -e yazi"
+class = "yazi"
+size = "75% 60%"
+unfocus = "hide"
+lazy = true
+

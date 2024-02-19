@@ -1,0 +1,116 @@
+
+/* @import "/home/ak/.cache/wal/colors-waybar.css"; */
+
+@import '/home/ak/.config/waybar/colors/catpuccinMocha.css';
+
+* {
+    font-family: "JetBrainsMono Nerd Font ";
+    font-weight: 800;
+    /* border: none; */
+    /* border-radius: 0px; */
+    border-radius: 0;
+    font-size: 12px;
+    /* font-weight: 500; */
+    padding: 1;
+    margin: 0;
+    /* margin-right: 2px; */
+    /* margin-left: 2px; */
+    /* transition-delay: 3s; */
+}
+/**/
+
+
+window#waybar {
+  background: @color0;
+  /* color: white; */
+  /* border: 1px solid #8fd4ff; */
+  /* margin-left: 100px; */
+}
+
+
+#workspaces {
+    /* background: @color1; */
+    margin: 0px 10px 0px 10px;
+    /* padding: 0px 1px; */
+    color: @color2;
+}
+
+#workspaces button {
+    /* padding: 0px 5px; */
+    /* margin: 4px 3px; */
+    /* border: 0px; */
+    color: @color1;
+}
+
+#workspaces button.active {
+    color: @color7;
+    background: @color9;
+    border-radius: 0px;
+    min-width: 20px;
+}
+
+#workspaces button.empty{}
+#workspaces button.persistent{}
+#workspaces button.visible{}
+
+
+#taskbar {
+    background: @color8;
+    padding:0px;
+    margin: 0px 10px 0px 10px;
+}
+
+#taskbar button {
+    padding: 0px 5px 0px 5px;
+}
+
+#idle_inhibitor{
+  color: @color2;
+  margin: 0px 10px 0px 10px;
+}
+
+#wireplumber{
+  color: @color3;
+  margin: 0px 10px 0px 10px;
+}
+
+#wireplumber.muted{
+  color: @color1;
+  margin: 0px 10px 0px 10px;
+}
+
+#network{
+  color: @color3;
+  margin: 0px 10px 0px 10px;
+}
+#pulseaudio{
+  color: @color1;
+  margin: 0px 10px 0px 10px;
+
+}
+#clock{
+  color: @color6;
+  margin: 0px 10px 0px 10px;
+
+}
+
+#temperature{
+  color: @color4;
+  /* background: @color9; */
+  margin: 0px 10px 0px 10px;
+}
+#temperature.critical{}
+
+#upower{
+  color: @color5;
+  margin: 0px 10px 0px 10px;
+}
+
+#tray{
+  /* color: @color6; */
+  margin: 0px 10px 0px 10px;
+}
+
+
+
+/**/
